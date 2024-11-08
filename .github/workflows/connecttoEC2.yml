@@ -21,7 +21,9 @@ jobs:
           mkdir -p ~/.ssh
           echo "$BASTION_PRIVATE_KEY" > ~/.ssh/bastion_key.pem
           chmod 600 ~/.ssh/bastion_key.pem
-          ssh -i ~/.ssh/bastion_key.pem -o StrictHostKeyChecking=no ec2-user@13.235.31.183 << EOF
+          ssh -i ~/.ssh/bastion_key.pem -o StrictHostKeyChecking=no ec2-user@13.234.239.15 << EOF
             echo "Creating hello world file on Bastion..."
-            echo "This is the hello world file created using github actions" > /home/ec2-user/hello_world.txt 
+            echo "This is the hello world file created using github actions" > /home/ec2-user/hello_world.txt
+            my_age=23
+            echo "my age is '$my_age'"
           EOF

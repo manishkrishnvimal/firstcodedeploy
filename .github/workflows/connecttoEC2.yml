@@ -25,5 +25,5 @@ jobs:
             echo "Creating hello world file on Bastion..."
             echo "This is the hello world file created using github actions" > /home/ec2-user/hello_world.txt
             my_age=23
-            echo 'my age is "$my_age"'
+            echo "my age is $my_age"
           EOF
